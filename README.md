@@ -1,0 +1,2 @@
+# fuzzyCardiovascularDiseaseRisk
+Calculating CardiovascularDiseaseRisk using Fuzzy logic
