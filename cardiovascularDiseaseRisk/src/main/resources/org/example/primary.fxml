@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="886.0" style="-fx-background-color: #000005;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+   <children>
+      <SplitPane dividerPositions="0.375" layoutX="114.0" layoutY="110.0" orientation="VERTICAL" prefHeight="136.0" prefWidth="304.0" style="-fx-background-color: #ffffff;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="23.0" prefWidth="257.0">
+               <children>
+                  <Label fx:id="label_age" layoutX="14.0" layoutY="15.0" prefHeight="18.0" prefWidth="95.0" text="Age: " />
+                  <ChoiceBox fx:id="cb_age" layoutX="104.0" layoutY="12.0" onAction="#onChoiceMade" prefWidth="150.0" value="">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Young" />
+                           <String fx:value="MidAge" />
+                           <String fx:value="Old" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+               </children>
+          </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="34.0" prefWidth="261.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label fx:id="label_years" layoutX="14.0" layoutY="13.0" text="Years: " />
+                  <TextField fx:id="age_change" layoutX="103.0" layoutY="14.0" onAction="#onAgeChange" prefHeight="26.0" prefWidth="56.0" />
+
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+
+      <SplitPane dividerPositions="0.375" layoutX="114.0" layoutY="251.0" orientation="VERTICAL" prefHeight="136.0" prefWidth="304.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="82.0" layoutY="3.0" prefHeight="50.0" prefWidth="151.0" text="Body Mass Index" >
+                      <font>
+                          <Font name="Calibri" size="20.0" />
+                      </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Slider fx:id="slider_BMI" layoutX="86.0" layoutY="5.0" min="10.0" max="50.0" onMouseDragged="#onSliderBMI" prefHeight="26.0" prefWidth="150.0" showTickLabels="true" showTickMarks="true" />
+                  <Label layoutX="238.0" layoutY="5.0" text="Obese" />
+                  <Label layoutX="14.0" layoutY="5.0" text="Underweight" />
+                  <Label fx:id="label_BMI" layoutX="117.0" layoutY="34.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+
+       <SplitPane dividerPositions="0.375" layoutX="114.0" layoutY="391.0" orientation="VERTICAL" prefHeight="150" prefWidth="304.0">
+           <items>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffffff;">
+                   <children>
+                       <Label layoutX="82.0" layoutY="3.0" prefHeight="50.0" prefWidth="151.0" text="Blood Pressure" >
+                           <font>
+                               <Font name="Calibri" size="20.0" />
+                           </font>
+                       </Label>
+                   </children>
+               </AnchorPane>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="114.0" prefWidth="262.0" style="-fx-background-color: #ffffff;">
+                   <children>
+                       <Slider fx:id="slider_Pressure" layoutX="86.0" layoutY="5.0" min="80" max="200.0" onMouseDragged="#onSliderPressure" prefHeight="26.0" prefWidth="150.0" showTickLabels="true" showTickMarks="true" />
+                       <Label layoutX="238.0" layoutY="5.0" text="Low" />
+                       <Label layoutX="14.0" layoutY="5.0" text="Very High" />
+                       <Label fx:id="label_Pressure"  />
+                   </children>
+               </AnchorPane>
+           </items>
+       </SplitPane>
+
+<!--       <SplitPane dividerPositions="0.3" layoutX="14.0" layoutY="546.0" orientation="VERTICAL" prefHeight="150" prefWidth="304.0">-->
+<!--           <items>-->
+<!--               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffffff;">-->
+<!--                   <children>-->
+<!--                       <Label layoutX="95.0" layoutY="7.0" prefHeight="18.0" prefWidth="102.0" text="grupnou" />-->
+<!--                   </children>-->
+<!--               </AnchorPane>-->
+<!--               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="114.0" prefWidth="262.0" style="-fx-background-color: #ffffff;">-->
+<!--                   <children>-->
+<!--                       <Label layoutX="14.0" layoutY="40.0" text="PhysicalActivity" />-->
+<!--                       <Label layoutX="14.0" layoutY="5.0" text="Medicamentation" />-->
+<!--                       <Label layoutX="14.0" layoutY="75.0" prefHeight="26.0" prefWidth="41.0" text="Timer" />-->
+
+<!--                       <Slider fx:id="slider_PhysicalActivity" layoutX="130.0" layoutY="5.0" max="1.0" onMouseDragged="#onSliderPhysicalActivity" prefHeight="26.0" prefWidth="55.0" showTickLabels="true" showTickMarks="true" />-->
+<!--                       <Slider fx:id="slider_Medicamentation" layoutX="130.0" layoutY="40.0" max="1.0" onMouseDragged="#onSliderMedicamentation" prefHeight="26.0" prefWidth="55.0" showTickLabels="true" showTickMarks="true" />-->
+
+<!--                       <Label fx:id="label_PhysicalActivity" layoutX="145.0" layoutY="24.0" />-->
+<!--                       <Label fx:id="label_Medicamentation" layoutX="145.0" layoutY="58.0" />-->
+<!--                   </children>-->
+<!--               </AnchorPane>-->
+<!--           </items>-->
+<!--       </SplitPane>-->
+
+      <SplitPane dividerPositions="0.375" layoutX="438.0" layoutY="110.0" orientation="VERTICAL" prefHeight="136.0" prefWidth="304.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="82.0" layoutY="3.0" prefHeight="50.0" prefWidth="151.0" text="Variabile Fuzzy" >
+                      <font>
+                          <Font name="Calibri" size="20.0" />
+                      </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label fx:id="label_fuzzy_Age" layoutX="14.0" layoutY="6.0" text="Input Age: 0" />
+                  <Label fx:id="label_fuzzy_BMI" layoutX="14.0" layoutY="22.0" text="Input BMI: 0" />
+                   <Label fx:id="label_fuzzy_BloodPressure" layoutX="14.0" layoutY="40.0" text="Input Blood Presure: 0" />
+<!--                   <Label fx:id="label_fuzzy_Medicamentation" layoutX="14.0" layoutY="56.0" text="Input Medicamentation: NO" />-->
+<!--                   <Label fx:id="label_fuzzy_PhysicalActivity" layoutX="14.0" layoutY="72.0" text="Input Physical Activity: NO" />-->
+                   <Label fx:id="label_fuzzy_Risk" layoutX="14.0" layoutY="90.0" text="Output Risk: 0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+
+      <SplitPane dividerPositions="0.375" layoutX="438.0" layoutY="251.0" orientation="VERTICAL" prefHeight="136.0" prefWidth="304.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="82.0" layoutY="6.0" prefHeight="50.0" prefWidth="41.0" text="Risk" textAlignment="CENTER" >
+                      <font>
+                          <Font name="Calibri" size="20.0"  />
+                      </font>
+                   </Label>
+               </children>
+          </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label fx:id="label_risk" layoutX="82.0" layoutY="6.0" prefHeight="50.0" prefWidth="95.0" text="0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+
+      <Label layoutX="112.0" layoutY="11.0" prefHeight="106.0" prefWidth="630.0" text="Cardiovascular Disease Risk" textFill="WHITE">
+         <font>
+            <Font size="52.0" />
+         </font></Label>
+   </children>
+</Pane>
